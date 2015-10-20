@@ -43,6 +43,7 @@ percentile#findK x 116,079 ops/sec ±0.54% (97 runs sampled)
 percentile#sort x 16,077 ops/sec ±0.90% (98 runs sampled)
 Fastest is percentile#findK
 ```
+`percentile 不需要进行完全排序，只需要逐步定位到百分位的区域内，所以findK的这种基于quickSort的算法的复杂度降到了o(n)`
 
 ## License
 MIT &copy; [Michał Jezierski](https://pl.linkedin.com/in/jezierskimichal)
